@@ -1,0 +1,61 @@
+
+
+.stat-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px;
+    height: 100%;
+    /* FIX 1: Darkened the border slightly so the card edges are clearly visible */
+    border: 1px solid #cbd5e1; 
+    /* FIX 2: Increased shadow opacity from 0.04 to 0.08 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    /* Slightly stronger hover shadow to match */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(226, 232, 240, 0.8);
+}
+
+.stat-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 15px;
+    /* Added subtle letter spacing for crisp, modern readability */
+    letter-spacing: 0.3px; 
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    /* FIX 3: Removed the hardcoded 'background: #f8fafc;' so your React inline colors can work */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+/* NEW: Makes the icon slightly bounce/grow when the whole card is hovered */
+.stat-card:hover .stat-card-icon {
+    transform: scale(1.10);
+}
+
+.stat-card-value {
+    margin: 0;
+    font-size: 34px;
+    /* Bumped to 800 for stronger numerical emphasis */
+    font-weight: 800; 
+    color: #1e293b;
+    /* Tightened the letter spacing (standard practice for large dashboard numbers) */
+    letter-spacing: -1px; 
+    line-height: 1.1;
+} 
