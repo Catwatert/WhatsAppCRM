@@ -12,6 +12,7 @@ import {
 
 const DEBOUNCE_DELAY = 500;
 
+
 function Contacts() {
     const [showModal, setShowModal] = useState(false);
     const [name, setName] = useState("");
