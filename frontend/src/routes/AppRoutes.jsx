@@ -3,13 +3,12 @@ import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
 import Contacts from "../pages/Contacts";
+import Patients from "../pages/Patients";
 import PublicRoute from "./PublicRoute";
 import ProtectedRoute from "./ProtectedRoute";
 
-
 function AppRoutes() {
   return (
-
     <BrowserRouter>
       <Routes>
         <Route
@@ -29,7 +28,7 @@ function AppRoutes() {
             </PublicRoute>
           }
         />
-        
+
         <Route
           path="/contacts"
           element={
@@ -39,11 +38,18 @@ function AppRoutes() {
           }
         />
 
+        <Route
+          path="/patients"
+          element={
+            <ProtectedRoute>
+              <Patients />
+            </ProtectedRoute>
+          }
+        />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-
-
   );
 }
 
