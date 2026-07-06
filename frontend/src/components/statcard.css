@@ -1,12 +1,10 @@
-
-
 .stat-card {
     background: #ffffff;
     border-radius: 18px;
     padding: 24px;
     height: 100%;
     /* FIX 1: Darkened the border slightly so the card edges are clearly visible */
-    border: 1px solid #cbd5e1; 
+    border: 1px solid #cbd5e1;
     /* FIX 2: Increased shadow opacity from 0.04 to 0.08 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -28,7 +26,7 @@
     font-weight: 600;
     font-size: 15px;
     /* Added subtle letter spacing for crisp, modern readability */
-    letter-spacing: 0.3px; 
+    letter-spacing: 0.3px;
 }
 
 .stat-card-icon {
@@ -49,13 +47,63 @@
     transform: scale(1.10);
 }
 
+/* Icon Background Colors */
+
+.bg-success {
+    background: #25D366 !important;
+    color: #fff;
+}
+
+.bg-primary {
+    background: #0d6efd !important;
+    color: #fff;
+}
+
+.bg-warning {
+    background: #f59e0b !important;
+    color: #fff;
+}
+
+.bg-danger {
+    background: #ef4444 !important;
+    color: #fff;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+    .stat-card {
+
+        padding: 18px;
+
+    }
+
+    .stat-card-value {
+
+        font-size: 28px;
+
+    }
+
+    .stat-card-icon {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 20px;
+
+    }
+
+}
+
 .stat-card-value {
     margin: 0;
     font-size: 34px;
     /* Bumped to 800 for stronger numerical emphasis */
-    font-weight: 800; 
+    font-weight: 800;
     color: #1e293b;
     /* Tightened the letter spacing (standard practice for large dashboard numbers) */
-    letter-spacing: -1px; 
+    letter-spacing: -1px;
     line-height: 1.1;
-} 
+}
